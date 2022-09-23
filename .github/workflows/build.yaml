@@ -100,8 +100,8 @@ jobs:
       - name: upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: full-tree
-          path: .
+          name: built-distribution.whl
+          path: dist/*.whl
           retention-days: 7
       - name: pip upload
         if: github.event_name == 'push'
